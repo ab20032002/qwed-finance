@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: QWED-AI/qwed-finance@v1.1.1
+      - uses: QWED-AI/qwed-finance@v1.1.2
         with:
           test-script: tests/verify_agent.py
