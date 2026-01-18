@@ -1,12 +1,16 @@
 """
 QWED-Finance: Deterministic verification for banking and financial AI
 
-Five Guards for enterprise-grade verification:
+v0.4.0 - Audit-Ready Banking Stack
+
+Five Guards + Audit Trail:
 - ComplianceGuard: KYC/AML regulatory logic (Z3)
 - CalendarGuard: Day count conventions (SymPy)
 - DerivativesGuard: Options pricing & margin (Black-Scholes)
 - MessageGuard: ISO 20022 / SWIFT validation (XML Schema)
 - QueryGuard: SQL safety & table access (SQLGlot AST)
+- CrossGuard: Multi-layer verification integration
+- VerificationReceipt: Cryptographic audit trail
 """
 
 from .finance_verifier import FinanceVerifier, VerificationResult
@@ -15,9 +19,17 @@ from .calendar_guard import CalendarGuard, CalendarResult, DayCountConvention
 from .derivatives_guard import DerivativesGuard, DerivativesResult, OptionType
 from .message_guard import MessageGuard, MessageResult, MessageType, SwiftMtType
 from .query_guard import QueryGuard, QueryResult, QueryRisk
+from .cross_guard import CrossGuard, CrossGuardResult
+from .models.receipt import (
+    VerificationReceipt, 
+    VerificationEngine, 
+    VerificationStatus,
+    ReceiptGenerator,
+    AuditLog
+)
 from .schemas import LoanSchema, InvestmentSchema, AmortizationSchema
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 __all__ = [
     # Core Verifier
     "FinanceVerifier",
@@ -49,6 +61,17 @@ __all__ = [
     "QueryGuard",
     "QueryResult",
     "QueryRisk",
+    
+    # Cross Guard
+    "CrossGuard",
+    "CrossGuardResult",
+    
+    # Audit Trail
+    "VerificationReceipt",
+    "VerificationEngine",
+    "VerificationStatus",
+    "ReceiptGenerator",
+    "AuditLog",
     
     # Schemas
     "LoanSchema",
