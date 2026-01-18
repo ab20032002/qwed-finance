@@ -1,0 +1,65 @@
+name: 'QWED Finance Verify'
+description: 'Deterministically verify banking AI agents in CI/CD pipelines'
+author: 'QWED-AI'
+
+branding:
+  icon: 'shield'
+  color: 'green'
+
+inputs:
+  test-script:
+    description: 'Path to your Python test script that uses qwed-finance'
+    required: true
+  python-version:
+    description: 'Python version to use'
+    required: false
+    default: '3.11'
+  fail-on-violation:
+    description: 'Fail the workflow if verification fails'
+    required: false
+    default: 'true'
+
+outputs:
+  verified:
+    description: 'Whether all verifications passed'
+  receipt-count:
+    description: 'Number of verification receipts generated'
+  violations:
+    description: 'JSON array of violations found'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install qwed-finance
+      shell: bash
+      run: |
+        pip install qwed-finance
+
+    - name: Run verification script
+      id: verify
+      shell: bash
+      run: |
+        python ${{ inputs.test-script }} 2>&1 | tee verification_output.txt
+        echo "verified=true" >> $GITHUB_OUTPUT
+      continue-on-error: true
+
+    - name: Check verification result
+      shell: bash
+      run: |
+        if [ "${{ steps.verify.outcome }}" == "failure" ] && [ "${{ inputs.fail-on-violation }}" == "true" ]; then
+          echo "::error::QWED Finance verification failed!"
+          exit 1
+        fi
+
+    - name: Upload verification receipts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: qwed-finance-receipts
+        path: verification_output.txt
+        retention-days: 30

@@ -1,0 +1,47 @@
+{
+    "name": "@qwed-ai/finance",
+    "version": "1.0.0",
+    "description": "TypeScript wrapper for QWED-Finance - Deterministic verification for banking AI",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "qwed",
+        "finance",
+        "banking",
+        "verification",
+        "ai",
+        "llm",
+        "fintech",
+        "aml",
+        "kyc",
+        "compliance"
+    ],
+    "author": "QWED-AI <rahul@qwedai.com>",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/QWED-AI/qwed-finance.git"
+    },
+    "homepage": "https://docs.qwedai.com/docs/finance/overview",
+    "bugs": {
+        "url": "https://github.com/QWED-AI/qwed-finance/issues"
+    },
+    "dependencies": {
+        "python-shell": "^5.0.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "@types/node": "^20.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ]
+}
