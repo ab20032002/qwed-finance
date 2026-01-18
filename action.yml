@@ -38,7 +38,7 @@ runs:
     - name: Install qwed-finance
       shell: bash
       run: |
-        pip install qwed-finance
+        pip install ${{ github.action_path }}
 
     - name: Run verification script
       id: verify
