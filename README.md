@@ -6,7 +6,6 @@
 [![PyPI](https://img.shields.io/pypi/v/qwed-finance?color=blue)](https://pypi.org/project/qwed-finance/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![npm](https://img.shields.io/npm/v/@qwed-ai/finance?color=red)](https://www.npmjs.com/package/@qwed-ai/finance)
 
 > Part of the [QWED Ecosystem](https://github.com/QWED-AI) - Verification Infrastructure for AI
 
@@ -298,6 +297,20 @@ To block PRs that fail verification, add this to your branch protection rules:
 - Settings → Branches → Add Rule
 - Check "Require status checks to pass"
 - Select "verify" job
+
+---
+
+## 🏅 Add "Verified by QWED" Badge
+
+Show that your project uses QWED verification! Copy this to your README:
+
+```markdown
+[![Verified by QWED](https://img.shields.io/badge/Verified_by-QWED-00C853?style=flat&logo=checkmarx)](https://github.com/QWED-AI/qwed-finance)
+```
+
+**Preview:**
+
+[![Verified by QWED](https://img.shields.io/badge/Verified_by-QWED-00C853?style=flat&logo=checkmarx)](https://github.com/QWED-AI/qwed-finance)
 
 ---
 
