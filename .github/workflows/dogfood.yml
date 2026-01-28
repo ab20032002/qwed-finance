@@ -26,7 +26,7 @@ jobs:
           verification_type: npv
           cashflows: '-1000,300,400,500,600'
           rate: '0.10'
-          llm_output: '376.86'
+          llm_output: '388.77'
       
       # Test 2: IRR Verification
       - name: Test IRR Verification

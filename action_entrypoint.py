@@ -43,7 +43,7 @@ def set_output(name: str, value: str):
     if github_output:
         with open(github_output, "a") as f:
             f.write(f"{name}={value}\n")
-    print(f"::set-output name={name}::{value}")
+    # print(f"::set-output name={name}::{value}") # Deprecated
 
 
 def generate_sarif(findings: list, repo: str) -> dict:
